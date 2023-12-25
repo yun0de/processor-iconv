@@ -7,7 +7,7 @@ services:
 
 before_script:
   - docker -v
-  - docker build -t $APP_IMAGE
+  - docker build -t $APP_IMAGE .
   - docker run $APP_IMAGE composer ci
 
   # push test image to ECR
